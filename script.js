@@ -75,7 +75,44 @@
       if (reduce) done(); else setTimeout(done, 720);
     });
   };
-  chips.forEach(function (c) { c.addEventListener('click', function () { show(c.getAttribute('data-f')); }); });
+  /* Автопрокрутка тканей: пока герой в кадре и вкладка открыта; ручной выбор - пауза 12 с, наведение - пауза */
+  var ORDER = Array.prototype.map.call(chips, function (c) { return c.getAttribute('data-f'); });
+  var AUTO_MS = 4500, autoT = null, autoT2 = null, holdUntil = 0, hovered = false, heroIn = true;
+  var sampleBox = document.querySelector('.sample');
+  var reduceMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var setRun = function (on) { if (sampleBox) sampleBox.classList.toggle('is-auto', on); };
+  var stopAuto = function () { clearTimeout(autoT); clearTimeout(autoT2); autoT = null; setRun(false); };
+  var canAuto = function () { return win && heroIn && !hovered && !document.hidden && !reduceMq.matches; };
+  var planAuto = function () {
+    stopAuto();
+    if (!canAuto()) return;
+    var wait = Math.max(0, holdUntil - Date.now());
+    autoT = setTimeout(function () {
+      if (!canAuto()) return;
+      var i = ORDER.indexOf(current);
+      show(ORDER[(i + 1) % ORDER.length]);
+      planAuto();
+    }, wait + AUTO_MS);
+    /* полоска прогресса под активной тканью перезапускается на каждом шаге */
+    setRun(false); void (sampleBox && sampleBox.offsetWidth);
+    if (sampleBox) sampleBox.style.setProperty('--auto-ms', AUTO_MS + 'ms');
+    if (!wait) setRun(true); else autoT2 = setTimeout(function () { setRun(true); }, wait);
+  };
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      show(c.getAttribute('data-f'));
+      holdUntil = Date.now() + 12000; clearTimeout(autoT2); planAuto();
+    });
+  });
+  [win, sampleBox].forEach(function (el) {
+    if (!el) return;
+    el.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hovered = true; clearTimeout(autoT2); stopAuto(); } });
+    el.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hovered = false; planAuto(); } });
+  });
+  document.addEventListener('visibilitychange', planAuto);
+  if (win && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { heroIn = en[0].isIntersecting; planAuto(); }, { threshold: 0.35 }).observe(win);
+  } else if (win) { planAuto(); }
 
   if (win) {
     var first = win.querySelector('.win-img.is-on');

@@ -110,6 +110,10 @@ h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
 .chip span{font-size:12px;line-height:1;color:var(--muted);letter-spacing:.01em}
 .chip[aria-pressed="true"]{border-color:var(--gold)}
 .chip[aria-pressed="true"] span{color:var(--ink);font-weight:600}
+.chip{position:relative}
+.chip::after{content:"";position:absolute;left:3px;right:3px;bottom:-5px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.sample.is-auto .chip[aria-pressed="true"]::after{animation:autoFill var(--auto-ms,4500ms) linear both}
+@keyframes autoFill{to{transform:scaleX(1)}}
 @media (hover:hover){.chip:hover img{transform:scale(1.05)}}
 .sample-name{display:flex;flex-direction:column;gap:4px;margin-top:12px;align-self:center;min-height:64px;justify-content:center}
 .sample-name b{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--ink);white-space:nowrap}
