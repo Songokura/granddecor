@@ -144,7 +144,7 @@
       HERO_VARS.forEach(function (n) { setVar(hero, n, ''); });
       return;
     }
-    var W = hero.clientWidth, H = hero.clientHeight, TICK = 44;
+    var W = hero.clientWidth, H = hero.clientHeight, TICK = 0;
     var gut = Math.min(48, Math.max(20, W * 0.04));
     var free = H - TICK;
     var h0 = Math.min(600, free - 148);
@@ -152,8 +152,8 @@
     var w0 = Math.min(right - left, h0 * 1.25, 640);
     var cx = (left + right) / 2, cy = (free - 100) / 2 + 8;
     var wF = 2 * Math.max(cx, W - cx) + 40, hF = 2 * Math.max(cy, H - cy) + 40;
-    var p = easeInOut(clamp(stay / 0.8));
-    var s = easeOut(introK);
+    var p = 0;
+    var s = 1;
     var w = (w0 + (wF - w0) * p) * s, h = (h0 + (hF - h0) * p) * s;
     /* клип окна не уходит в минус, а рамка зубцов - уходит за край и прячется под клипом */
     var fl = cx - w / 2, fr = W - cx - w / 2, ft = cy - h / 2, fb = H - cy - h / 2;

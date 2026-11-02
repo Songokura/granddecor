@@ -439,3 +439,15 @@ html[lang="kk"] .display .h1a{letter-spacing:-.018em}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
+
+/* 02.11.2026 владелец: в герое и плитах просто шторы - без расширения образца, без зубчатой рамки, без бегущей ленты */
+.swf,.tz::before,.tz::after{display:none}
+.pw-hero{height:var(--ph)}
+.win{inset:var(--ct,0px) var(--cr,0px) var(--cb,0px) var(--cl,0px);clip-path:none;border-radius:6px;overflow:hidden}
+.win-img{transform:none}
+.window.intro .win-img.is-on,.win.intro .win-img.is-on{animation:none}
+.hero-in{height:100%;transform:none;opacity:1}
+.sample{transform:none;opacity:1}
+.ph-in{clip-path:none;border-radius:6px}
+.ph-in img,.ph-in video{transform:none}
+@media (max-width:760px){.win{border-radius:0}}
