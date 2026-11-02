@@ -145,12 +145,18 @@
       return;
     }
     var W = hero.clientWidth, H = hero.clientHeight, TICK = 0;
-    var gut = Math.min(48, Math.max(20, W * 0.04));
+    /* кадр по правому краю контейнера; кадр + блок тканей целиком в экране под шапкой */
+    var wrapEl = hero.querySelector('.hero-in');
+    var cs = wrapEl ? getComputedStyle(wrapEl) : null;
+    var wl = wrapEl ? wrapEl.getBoundingClientRect().left - hero.getBoundingClientRect().left : 0;
+    var right = wrapEl ? wl + wrapEl.clientWidth - parseFloat(cs.paddingRight) : W - 48;
     var free = H - TICK;
-    var h0 = Math.min(600, free - 148);
-    var left = W * 0.54, right = W - gut;
-    var w0 = Math.min(right - left, h0 * 1.25, 640);
-    var cx = (left + right) / 2, cy = (free - 100) / 2 + 8;
+    var sH = (sampleBox ? sampleBox.offsetHeight : 110) + 18;
+    var padV = Math.max(24, Math.min(48, free * 0.06));
+    var h0 = Math.max(220, Math.min(560, free - padV * 2 - sH));
+    var left = W * 0.54;
+    var w0 = Math.min(right - left, h0 * 1.05, 600);
+    var cx = right - w0 / 2, cy = (free - (h0 + sH)) / 2 + h0 / 2;
     var wF = 2 * Math.max(cx, W - cx) + 40, hF = 2 * Math.max(cy, H - cy) + 40;
     var p = 0;
     var s = 1;

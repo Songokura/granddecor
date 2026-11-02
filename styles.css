@@ -446,7 +446,8 @@ html[lang="kk"] .display .h1a{letter-spacing:-.018em}
 .win{inset:var(--ct,0px) var(--cr,0px) var(--cb,0px) var(--cl,0px);clip-path:none;border-radius:6px;overflow:hidden}
 .win-img{transform:none}
 .window.intro .win-img.is-on,.win.intro .win-img.is-on{animation:none}
-.hero-in{height:100%;transform:none;opacity:1}
+@media (min-width:761px){.hero-in{height:100%;padding-bottom:0;transform:none;opacity:1}}
+@media (max-width:760px){.hero-in{transform:none;opacity:1}}
 .sample{transform:none;opacity:1}
 .ph-in{clip-path:none;border-radius:6px}
 .ph-in img,.ph-in video{transform:none}
