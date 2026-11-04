@@ -167,7 +167,8 @@ body.menu-open .burger span:last-child { top: 21.5px; transform: rotate(-45deg);
 /* Работы */
 .gal { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 20px); }
 .gal li { min-width: 0; }
-.gal img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
+.gal img, .gal video { display: block; width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
+.gal video { border-radius: var(--r); background: var(--beige-2); }
 
 /* О салоне */
 .salon-in { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(36px, 5vw, 80px); align-items: center; }
@@ -291,7 +292,7 @@ body.menu-open .burger span:last-child { top: 21.5px; transform: rotate(-45deg);
 /* Планшет */
 @media (max-width: 1024px) {
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gal { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gal { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .stl { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
   .salon-in, .trust-in, .form-in, .ct-in { grid-template-columns: minmax(0, 1fr); }
   .ct-media { aspect-ratio: 16 / 10; }
