@@ -29,7 +29,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero-1600.webp?v=2" imagesrcset="assets/img/hero-1000.webp?v=2 1000w, assets/img/hero-1600.webp?v=2 1600w, assets/img/hero-2000.webp?v=2 2000w" imagesizes="100vw" media="(min-width: 761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m.webp?v=2" media="(max-width: 760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261104-1">
+<link rel="stylesheet" href="styles.css?v=20261104-2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Granddecor - салон штор","image":"https://songokura.github.io/granddecor/assets/img/og-image.jpg","url":"https://songokura.github.io/granddecor/","telephone":"+77076143368","foundingDate":"2010","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"ул. Ж. Нажимеденова, 28, ЖК Dauys, НП-4","addressLocality":"Астана","addressCountry":"KZ"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"17:00"}],"sameAs":["https://www.instagram.com/salon_shtor_granddecor/","https://2gis.kz/astana/firm/70000001116891592"]}
 </script>
@@ -55,9 +55,8 @@
     <a class="logo" href="#top" aria-label="Granddecor - салон штор, на главную"><img src="assets/img/logo.svg?v=20261103-1" alt="Granddecor" width="110" height="59"></a>
     <nav class="nav" aria-label="Разделы">
       <a href="#uslugi" data-i="nav.services">Услуги</a>
-      <a href="#tkani" data-i="nav.fabrics">Ткани</a>
-      <a href="#raboty" data-i="nav.works">Работы</a>
-      <a href="#salon" data-i="nav.salon">О салоне</a>
+      <a href="#raboty" data-i="nav.works">Проекты</a>
+      <a href="#ceny" data-i="nav.prices">Цены</a>
       <a href="#kontakty" data-i="nav.contacts">Контакты</a>
     </nav>
     <div class="hdr-right">
@@ -74,9 +73,8 @@
   <div class="mnav" id="mnav">
     <nav aria-label="Меню">
       <a href="#uslugi" data-i="nav.services">Услуги</a>
-      <a href="#tkani" data-i="nav.fabrics">Ткани</a>
-      <a href="#raboty" data-i="nav.works">Работы</a>
-      <a href="#salon" data-i="nav.salon">О салоне</a>
+      <a href="#raboty" data-i="nav.works">Проекты</a>
+      <a href="#ceny" data-i="nav.prices">Цены</a>
       <a href="#kontakty" data-i="nav.contacts">Контакты</a>
     </nav>
     <div class="mnav-acts">
@@ -97,7 +95,7 @@
   <div class="hero-in wrap">
     <p class="kicker" data-i="hero.kicker">Астана · салон штор · с 2010 года</p>
     <h1 id="h1" class="display"><span class="h1a" data-i="hero.h1a">Шторы на заказ</span> <span class="h1b" data-i="hero.h1b">салон, склад и швейный цех в Астане</span></h1>
-    <p class="lead" data-i="hero.lead">Подберём ткань, снимем замер, сошьём и повесим шторы под ваши окна. С 2010 года&nbsp;- более 10&nbsp;000 довольных клиентов.</p>
+    <p class="lead" data-i="hero.lead">Шьём шторы и выполняем текстильное декорирование интерьеров. Сопровождаем проект на всех этапах: консультация в салоне, выезд дизайнера, замер, подбор тканей, пошив и монтаж.</p>
     <div class="hero-acts">
       <a class="btn btn-gold" href="https://wa.me/77076143368?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%88%D1%82%D0%BE%D1%80%D1%8B." target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i="hero.cta1">Подобрать шторы в WhatsApp</span></a>
       <a class="btn btn-ghost" href="#uslugi"><span data-i="hero.cta2">Смотреть услуги</span><svg width="16" height="16"><use href="#ic-arrow"/></svg></a>
@@ -106,95 +104,136 @@
   </div>
 </section>
 
+<!-- Почему мы: медиа слева, текст справа -->
+<section class="sec salon dark" id="salon" aria-labelledby="salon-h">
+  <div class="wrap salon-in">
+    <div class="salon-media rv">
+      <figure class="sm-a"><img src="assets/img/salon-1.webp" alt="Стенд с деревянными и алюминиевыми жалюзи в салоне Granddecor" width="760" height="950" loading="lazy" decoding="async"></figure>
+      <figure class="sm-b"><video class="loop" muted playsinline loop preload="none" poster="assets/img/salon-wall.webp" data-src="assets/video/salon-wall.mp4" width="720" height="480" aria-label="Стена образцов тканей в салоне"></video></figure>
+      <figure class="sm-c" id="ceh"><video class="loop" muted playsinline loop preload="none" poster="assets/img/salon-sew.webp" data-src="assets/video/salon-sew.mp4?v=2" width="720" height="540" aria-label="Швейная машина в цехе прошивает ткань"></video></figure>
+    </div>
+    <div class="salon-text rv">
+      <p class="kicker" data-i="salon.k">Почему мы</p>
+      <h2 id="salon-h" data-i="salon.h">Почему выбирают Granddecor</h2>
+      <ul class="facts">
+        <li><b data-i="salon.f0h">Салон 100&nbsp;м²</b><span data-i="salon.f0">Вы всегда можете посетить салон: посмотреть коллекции, потрогать ткани, сравнить фактуры и вместе с дизайнером выбрать вариант для вашего интерьера.</span></li>
+        <li><b data-i="salon.f1h">Выезд дизайнера</b><span data-i="salon.f1">Точный замер и подбор тканей под ваш интерьер прямо на объекте.</span></li>
+        <li><b data-i="salon.f2h">Склад тканей</b><span data-i="salon.f2">Актуальные и трендовые ткани в наличии на собственном складе.</span></li>
+        <li><b data-i="salon.f4h">Швейный цех</b><span data-i="salon.f4">Раскрой и пошив штор в нашем цехе, контроль качества каждого изделия перед доставкой.</span></li>
+        <li><b data-i="salon.f5h">С 2010 года</b><span data-i="salon.f5">Более 10&nbsp;000 довольных клиентов: квартиры, дома, отели, офисы и бизнес-центры.</span></li>
+      </ul>
+      <a class="btn btn-line" href="#kontakty"><span data-i="ceh.cta">Адрес и часы салона</span><svg width="16" height="16"><use href="#ic-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
 <!-- Услуги -->
 <section class="sec svc" id="uslugi" aria-labelledby="svc-h">
   <div class="wrap">
     <div class="head rv">
       <p class="kicker" data-i="svc.k">Услуги</p>
-      <h2 id="svc-h" data-i="svc.h">Шторы, тюль, ролл&#8209;шторы и жалюзи на заказ</h2>
-      <p class="sub" data-i="svc.sub">Цену считаем после замера: она зависит от ткани, размера окна и карниза.</p>
+      <h2 id="svc-h" data-i="svc.h">Наши услуги</h2>
+      <p class="sub" data-i="svc.sub">Шторы и тюль на заказ, жалюзи, римские и ролл&#8209;шторы, карнизы и химчистка текстиля.</p>
     </div>
     <div class="cards">
       <article class="card rv" id="shtory">
         <div class="card-m"><img src="assets/img/svc-shtory.webp" alt="Светлые портьеры на золотых подхватах в форме листьев и тюль - работа салона" width="640" height="800" loading="lazy" decoding="async"></div>
         <h3 data-i="s1.h">Шторы и портьеры</h3>
-        <p data-i="s1.p">Лён, бархат, блэкаут, жаккард. Ткань подбираем в салоне, шьём в нашем цехе.</p>
+        <p data-i="s1.p">Подбираем ткань под ваш интерьер и обговариваем дизайн будущих штор. Лён, бархат, блэкаут, жаккард - пошив в собственном цехе.</p>
         <a class="cbtn" data-wa="Шторы и портьеры" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
       <article class="card rv" id="tyul">
         <div class="card-m"><img src="assets/img/svc-tyul.webp" alt="Белый тюль с узором по низу в арочном окне" width="640" height="800" loading="lazy" decoding="async"></div>
         <h3 data-i="s2.h">Тюль и вуаль</h3>
-        <p data-i="s2.p">Подбор, продажа и пошив. С утяжелителем или без, на шторной ленте или люверсах.</p>
+        <p data-i="s2.p">Подбор, продажа и пошив тюля и вуали. С утяжелителем или без, на шторной ленте или люверсах.</p>
         <a class="cbtn" data-wa="Тюль и вуаль" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
-      </article>
-      <article class="card rv" id="roll-shtory">
-        <div class="card-m"><img src="assets/img/svc-roll.webp" alt="Серая ролл-штора из фактурной ткани" width="640" height="800" loading="lazy" decoding="async"></div>
-        <h3 data-i="s3.h">Ролл&#8209;шторы</h3>
-        <p data-i="s3.p">По размеру окна: системы день-ночь и блэкаут. Замер и установка.</p>
-        <a class="cbtn" data-wa="Ролл-шторы" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
       <article class="card rv" id="zhalyuzi">
         <div class="card-m"><img src="assets/img/svc-zhalyuzi.webp" alt="Деревянные жалюзи бежевого цвета во всю стену" width="640" height="800" loading="lazy" decoding="async"></div>
         <h3 data-i="s4.h">Жалюзи</h3>
-        <p data-i="s4.p">Продажа, изготовление по размеру проёма и установка.</p>
+        <p data-i="s4.p">Жалюзи для квартир, домов, офисов и коммерческих помещений. Изготовление по размеру проёма, продажа и установка.</p>
         <a class="cbtn" data-wa="Жалюзи" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
       <article class="card rv" id="rimskie">
         <div class="card-m"><img src="assets/img/svc-rimskie.webp" alt="Римская штора над окном кухни" width="640" height="800" loading="lazy" decoding="async"></div>
         <h3 data-i="s5.h">Римские шторы</h3>
-        <p data-i="s5.p">Изготавливаем по размеру окна из тканей салона.</p>
+        <p data-i="s5.p">Римские шторы для лаконичных и светлых интерьеров. Изготавливаем по размеру окна из тканей салона.</p>
         <a class="cbtn" data-wa="Римские шторы" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
+      </article>
+      <article class="card rv" id="roll-shtory">
+        <div class="card-m"><img src="assets/img/svc-roll.webp" alt="Серая ролл-штора из фактурной ткани" width="640" height="800" loading="lazy" decoding="async"></div>
+        <h3 data-i="s3.h">Ролл&#8209;шторы</h3>
+        <p data-i="s3.p">Практичное решение для защиты от солнца и приватности. Системы день-ночь и блэкаут по размеру окна, замер и установка.</p>
+        <a class="cbtn" data-wa="Ролл-шторы" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
       <article class="card rv" id="karnizy">
         <div class="card-m"><img src="assets/img/svc-karnizy.webp" alt="Стена с образцами карнизов в салоне" width="640" height="800" loading="lazy" decoding="async"></div>
-        <h3 data-i="s6.h">Карнизы и гардины</h3>
-        <p data-i="s6.p">Механические и электрические карнизы, гардины. Продажа и установка.</p>
+        <h3 data-i="s6.h">Карнизы и электрокарнизы</h3>
+        <p data-i="s6.p">Механические и электрические карнизы, гардины. Подбираем систему под размер окна и тип ткани, продаём и устанавливаем.</p>
         <a class="cbtn" data-wa="Механические и электрические карнизы" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
       <article class="card rv" id="pokryvala">
         <div class="card-m"><img src="assets/img/svc-pokryvala.webp" alt="Декоративная подушка зелёного цвета со стёжкой ромбом" width="640" height="800" loading="lazy" decoding="async"></div>
         <h3 data-i="s7.h">Покрывала и декоративные подушки</h3>
-        <p data-i="s7.p">Продажа и пошив покрывал и декоративных подушек.</p>
+        <p data-i="s7.p">Продажа и пошив покрывал и декоративных подушек для завершённого текстильного оформления интерьера.</p>
         <a class="cbtn" data-wa="Покрывала и декоративные подушки" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
       <article class="card rv" id="himchistka">
         <div class="card-m"><img src="assets/img/svc-himchistka.webp?v=3" alt="Мастер Granddecor чистит портьеру экстрактором" width="640" height="800" loading="lazy" decoding="async"></div>
         <h3 data-i="s8.h">Химчистка и стирка текстиля</h3>
-        <p data-i="s8.p">Шторы, тюль, покрывала, подушки. Чистка на дому и в цехе.</p>
+        <p data-i="s8.p">Химчистка и стирка штор, тюля, покрывал и подушек. Выполняем на дому и в цехе.</p>
         <a class="cbtn" data-wa="Химчистка и стирка текстиля" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i="cta.price">Узнать цену</span></a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- Ткани -->
-<section class="sec fab t-beige" id="tkani" aria-labelledby="fab-h">
-  <div class="wrap">
-    <div class="head rv">
-      <p class="kicker" data-i="fab.k">Ткани</p>
-      <h2 id="fab-h" data-i="fab.h">Ткани в салоне</h2>
-      <p class="sub" data-i="fab.sub">Портьерные ткани, тюль и вуаль можно посмотреть на свету и потрогать до заказа.</p>
+<!-- Цены -->
+<section class="sec price t-beige" id="ceny" aria-labelledby="price-h">
+  <div class="wrap price-in">
+    <div class="price-text rv">
+      <p class="kicker" data-i="price.k">Цены</p>
+      <h2 id="price-h" data-i="price.h">Стоимость штор на заказ</h2>
+      <p class="sub" data-i="price.sub">Стоимость изготовления штор и других изделий на заказ зависит от:</p>
+      <ul class="trust-facts">
+        <li data-i="price.f1">ткани, вида и размеров изделия;</li>
+        <li data-i="price.f2">сложности пошива и декоративных элементов;</li>
+        <li data-i="price.f3">вида шторной складки, карниза и креплений.</li>
+      </ul>
+      <p class="sub" data-i="price.note">Стоимость обговаривается индивидуально. Предварительный расчёт можно получить по заявке в WhatsApp или на встрече с дизайнером в салоне.</p>
     </div>
-    <div class="fab-grid">
-      <figure class="tile rv"><button type="button" class="zoom" data-full="assets/img/fab-1-xl.webp" data-g="fab" aria-label="Открыть фото крупно"><img src="assets/img/fab-1.webp" alt="Белый тюль и плотная портьерная ткань цвета какао" width="640" height="800" loading="lazy" decoding="async"><svg class="zi" width="18" height="18" aria-hidden="true"><use href="#ic-zoom"/></svg></button><figcaption data-i="fab.c1">Тюль и портьерная ткань</figcaption></figure>
-      <figure class="tile rv"><video class="loop" muted playsinline loop preload="none" poster="assets/img/fab-v1.webp" data-src="assets/video/fab-v1.mp4" width="720" height="900" aria-label="Ткань оливкового цвета с декоративной тесьмой"></video><figcaption data-i="fab.c4">Ткань с декоративной тесьмой</figcaption></figure>
-      <figure class="tile rv"><button type="button" class="zoom" data-full="assets/img/fab-2-xl.webp" data-g="fab" aria-label="Открыть фото крупно"><img src="assets/img/fab-2.webp" alt="Серая портьерная ткань с фактурой в складках" width="640" height="800" loading="lazy" decoding="async"><svg class="zi" width="18" height="18" aria-hidden="true"><use href="#ic-zoom"/></svg></button><figcaption data-i="fab.c2">Фактурная портьерная ткань</figcaption></figure>
-      <figure class="tile rv"><video class="loop" muted playsinline loop preload="none" poster="assets/img/fab-v2.webp" data-src="assets/video/fab-v2.mp4" width="720" height="900" aria-label="Мятный тюль на подхвате"></video><figcaption data-i="fab.c5">Тюль на подхвате</figcaption></figure>
-      <figure class="tile rv"><button type="button" class="zoom" data-full="assets/img/fab-3-xl.webp" data-g="fab" aria-label="Открыть фото крупно"><img src="assets/img/fab-3.webp" alt="Вуаль и плотная ткань крупного плетения" width="640" height="800" loading="lazy" decoding="async"><svg class="zi" width="18" height="18" aria-hidden="true"><use href="#ic-zoom"/></svg></button><figcaption data-i="fab.c3">Вуаль и ткань крупного плетения</figcaption></figure>
-      <figure class="tile rv"><video class="loop" muted playsinline loop preload="none" poster="assets/img/fab-v3.webp" data-src="assets/video/fab-v3.mp4" width="720" height="900" aria-label="Светлая ткань с помпонами"></video><figcaption data-i="fab.c6">Ткань с помпонами</figcaption></figure>
-    </div>
-    <div class="sec-cta rv">
-      <a class="btn btn-gold" data-wa="подбор ткани" data-wa-t="fabric" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i="fab.cta">Подобрать ткань в WhatsApp</span></a>
+    <div class="price-cta dark rv">
+      <p class="price-big" data-i="price.big">Предложим варианты штор под ваш бюджет</p>
+      <div class="price-acts">
+        <a class="btn btn-gold" href="#zayavka"><span data-i="price.cta1">Оставить заявку</span><svg width="16" height="16"><use href="#ic-arrow"/></svg></a>
+        <a class="btn btn-line" data-wa="выезд дизайнера" data-wa-t="designer" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i="price.cta2">Заказать выезд дизайнера</span></a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Как работаем -->
+<section class="sec steps" id="etapy" aria-labelledby="steps-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker" data-i="steps.k">Этапы</p>
+      <h2 id="steps-h" data-i="steps.h">Этапы работ</h2>
+    </div>
+    <ol class="stl">
+      <li class="rv"><span class="n">01</span><h3 data-i="st1.h">Выбор ткани в салоне</h3><p data-i="st1.p">Приезжайте в салон: дизайнер покажет самые актуальные ткани и поможет с выбором.</p></li>
+      <li class="rv"><span class="n">02</span><h3 data-i="st2.h">Выезд дизайнера и замер</h3><p data-i="st2.p">Дизайнер приезжает на объект с образцами тканей и палетками. Снимаем точные замеры окон, подбираем ткань под ваш интерьер, обговариваем дизайн будущих штор.</p></li>
+      <li class="rv"><span class="n">03</span><h3 data-i="st3.h">Пошив и контроль качества</h3><p data-i="st3.p">Выбранные по фактуре, цвету и дизайну ткани аккуратно шьём в нашем цехе. Перед доставкой шторы проходят контроль качества швов, точности модели пошива, правильности цвета и на дефекты.</p></li>
+      <li class="rv"><span class="n">04</span><h3 data-i="st4.h">Монтаж и установка</h3><p data-i="st4.p">Выполняем навеску и профессиональную развеску штор. Проверяем работу механизмов, регулируем складки и создаём завершённый образ интерьера.</p></li>
+    </ol>
+  </div>
+</section>
+
 <!-- Работы -->
-<section class="sec works" id="raboty" aria-labelledby="works-h">
+<section class="sec works t-beige" id="raboty" aria-labelledby="works-h">
   <div class="wrap">
     <div class="head rv">
       <p class="kicker" data-i="works.k">Работы</p>
-      <h2 id="works-h" data-i="works.h">Выполненные работы</h2>
+      <h2 id="works-h" data-i="works.h">Наши работы</h2>
       <p class="sub" data-i="works.sub">Шторы, тюль и текстиль у наших клиентов. Новые объекты выкладываем в Instagram.</p>
     </div>
     <ul class="gal">
@@ -217,25 +256,24 @@
   </div>
 </section>
 
-<!-- О салоне: медиа слева, текст справа -->
-<section class="sec salon dark" id="salon" aria-labelledby="salon-h">
-  <div class="wrap salon-in">
-    <div class="salon-media rv">
-      <figure class="sm-a"><img src="assets/img/salon-1.webp" alt="Стенд с деревянными и алюминиевыми жалюзи в салоне Granddecor" width="760" height="950" loading="lazy" decoding="async"></figure>
-      <figure class="sm-b"><video class="loop" muted playsinline loop preload="none" poster="assets/img/salon-wall.webp" data-src="assets/video/salon-wall.mp4" width="720" height="480" aria-label="Стена образцов тканей в салоне"></video></figure>
-      <figure class="sm-c" id="ceh"><video class="loop" muted playsinline loop preload="none" poster="assets/img/salon-sew.webp" data-src="assets/video/salon-sew.mp4?v=2" width="720" height="540" aria-label="Швейная машина в цехе прошивает ткань"></video></figure>
+<!-- Ткани -->
+<section class="sec fab" id="tkani" aria-labelledby="fab-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker" data-i="fab.k">Ткани</p>
+      <h2 id="fab-h" data-i="fab.h">Ткани в салоне</h2>
+      <p class="sub" data-i="fab.sub">Портьерные ткани, тюль и вуаль можно посмотреть на свету и потрогать до заказа.</p>
     </div>
-    <div class="salon-text rv">
-      <p class="kicker" data-i="salon.k">О салоне</p>
-      <h2 id="salon-h" data-i="salon.h">Салон, склад тканей и швейный цех</h2>
-      <p class="lead" data-i="salon.sub">Ткань, выбранную в салоне, берём со склада, кроим и шьём в нашем цехе.</p>
-      <ul class="facts">
-        <li><b data-i="salon.f0h">Салон 100&nbsp;м²</b><span data-i="salon.f0">Стены образцов тканей, жалюзи, ролл-шторы и карнизы на стендах.</span></li>
-        <li><b data-i="salon.f2h">Свой склад</b><span data-i="salon.f2">Ходовые ткани в наличии: шьём без ожидания поставки.</span></li>
-        <li><b data-i="salon.f4h">Швейный цех</b><span data-i="salon.f4">Раскрой, пошив и отпаривание готовых штор.</span></li>
-        <li><b data-i="salon.f3h">Контроль качества</b><span data-i="salon.f3">Проверяем швы и размеры до выезда на установку.</span></li>
-      </ul>
-      <a class="btn btn-line" href="#kontakty"><span data-i="ceh.cta">Адрес и часы салона</span><svg width="16" height="16"><use href="#ic-arrow"/></svg></a>
+    <div class="fab-grid">
+      <figure class="tile rv"><button type="button" class="zoom" data-full="assets/img/fab-1-xl.webp" data-g="fab" aria-label="Открыть фото крупно"><img src="assets/img/fab-1.webp" alt="Белый тюль и плотная портьерная ткань цвета какао" width="640" height="800" loading="lazy" decoding="async"><svg class="zi" width="18" height="18" aria-hidden="true"><use href="#ic-zoom"/></svg></button><figcaption data-i="fab.c1">Тюль и портьерная ткань</figcaption></figure>
+      <figure class="tile rv"><video class="loop" muted playsinline loop preload="none" poster="assets/img/fab-v1.webp" data-src="assets/video/fab-v1.mp4" width="720" height="900" aria-label="Ткань оливкового цвета с декоративной тесьмой"></video><figcaption data-i="fab.c4">Ткань с декоративной тесьмой</figcaption></figure>
+      <figure class="tile rv"><button type="button" class="zoom" data-full="assets/img/fab-2-xl.webp" data-g="fab" aria-label="Открыть фото крупно"><img src="assets/img/fab-2.webp" alt="Серая портьерная ткань с фактурой в складках" width="640" height="800" loading="lazy" decoding="async"><svg class="zi" width="18" height="18" aria-hidden="true"><use href="#ic-zoom"/></svg></button><figcaption data-i="fab.c2">Фактурная портьерная ткань</figcaption></figure>
+      <figure class="tile rv"><video class="loop" muted playsinline loop preload="none" poster="assets/img/fab-v2.webp" data-src="assets/video/fab-v2.mp4" width="720" height="900" aria-label="Мятный тюль на подхвате"></video><figcaption data-i="fab.c5">Тюль на подхвате</figcaption></figure>
+      <figure class="tile rv"><button type="button" class="zoom" data-full="assets/img/fab-3-xl.webp" data-g="fab" aria-label="Открыть фото крупно"><img src="assets/img/fab-3.webp" alt="Вуаль и плотная ткань крупного плетения" width="640" height="800" loading="lazy" decoding="async"><svg class="zi" width="18" height="18" aria-hidden="true"><use href="#ic-zoom"/></svg></button><figcaption data-i="fab.c3">Вуаль и ткань крупного плетения</figcaption></figure>
+      <figure class="tile rv"><video class="loop" muted playsinline loop preload="none" poster="assets/img/fab-v3.webp" data-src="assets/video/fab-v3.mp4" width="720" height="900" aria-label="Светлая ткань с помпонами"></video><figcaption data-i="fab.c6">Ткань с помпонами</figcaption></figure>
+    </div>
+    <div class="sec-cta rv">
+      <a class="btn btn-gold" data-wa="подбор ткани" data-wa-t="fabric" href="https://wa.me/77076143368" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i="fab.cta">Подобрать ткань в WhatsApp</span></a>
     </div>
   </div>
 </section>
@@ -246,11 +284,6 @@
     <div class="trust-text rv">
       <p class="kicker" data-i="trust.k">Отзывы</p>
       <h2 id="trust-h" data-i="trust.h">Отзывы клиентов</h2>
-      <p class="trust-n"><b data-i="trust.big">16 лет</b><span data-i="trust.n">шьём и устанавливаем шторы в Астане</span></p>
-      <ul class="trust-facts">
-        <li data-i="trust.f1">Частным клиентам - квартиры и дома.</li>
-        <li data-i="trust.f2">Бизнесу и организациям - отели, офисы, бизнес-центры, строительные компании и подрядчики.</li>
-      </ul>
       <a class="rate" href="https://2gis.kz/astana/firm/70000001116891592/tab/reviews" target="_blank" rel="noopener">
         <span class="rate-n">5,0</span>
         <span class="rate-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -274,29 +307,13 @@
   </div>
 </section>
 
-<!-- Как работаем -->
-<section class="sec steps" id="etapy" aria-labelledby="steps-h">
-  <div class="wrap">
-    <div class="head rv">
-      <p class="kicker" data-i="steps.k">Как работаем</p>
-      <h2 id="steps-h" data-i="steps.h">Порядок работы: от выбора ткани до установки</h2>
-    </div>
-    <ol class="stl">
-      <li class="rv"><span class="n">01</span><h3 data-i="st1.h">Выбор ткани в салоне</h3><p data-i="st1.p">Приезжайте в салон: дизайнер покажет самые актуальные ткани и поможет с выбором.</p></li>
-      <li class="rv"><span class="n">02</span><h3 data-i="st2.h">Выезд дизайнера и замер</h3><p data-i="st2.p">Дизайнер приезжает на объект с образцами тканей и палетками. Снимаем точные замеры окон, подбираем ткань под ваш интерьер, обговариваем дизайн будущих штор.</p></li>
-      <li class="rv"><span class="n">03</span><h3 data-i="st3.h">Пошив и контроль качества</h3><p data-i="st3.p">Выбранные по фактуре, цвету и дизайну ткани аккуратно шьём в нашем цехе. Перед доставкой шторы проходят контроль качества швов, точности модели пошива, правильности цвета и на дефекты.</p></li>
-      <li class="rv"><span class="n">04</span><h3 data-i="st4.h">Установка</h3><p data-i="st4.p">Устанавливаем механические и электрические карнизы, вешаем шторы.</p></li>
-    </ol>
-  </div>
-</section>
-
 <!-- Заявка -->
 <section class="sec lead-sec dark" id="zayavka" aria-labelledby="form-h">
   <div class="wrap form-in">
     <div class="form-text rv">
       <p class="kicker" data-i="form.k">Заявка</p>
-      <h2 id="form-h" data-i="form.h">Расчёт стоимости по вашим окнам</h2>
-      <p class="sub" data-i="form.sub">Ответит Гульнура в рабочее время в течение 5 минут. Дальше - замер на объекте и расчёт.</p>
+      <h2 id="form-h" data-i="form.h">Оставьте заявку</h2>
+      <p class="sub" data-i="form.sub">Подготовим предварительный расчёт и предложим варианты под ваш интерьер. Ответит Гульнура в рабочее время в течение 5 минут.</p>
       <p class="form-alt"><span data-i="form.alt">Или позвоните:</span> <a href="tel:+77076143368">+7&nbsp;707&nbsp;614&nbsp;33&nbsp;68</a></p>
     </div>
     <form class="form rv" id="leadForm" novalidate>
@@ -375,6 +392,6 @@
   <button type="button" class="lb-btn lb-nx" aria-label="Следующее фото"><svg width="22" height="22"><use href="#ic-arrow"/></svg></button>
 </div>
 
-<script src="script.js?v=20261104-1" defer></script>
+<script src="script.js?v=20261104-2" defer></script>
 </body>
 </html>

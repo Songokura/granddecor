@@ -21,8 +21,9 @@
 
   /* Кнопки у услуг: текст сообщения с названием услуги (ставится в href заранее, LeadBot дописывает код) */
   document.querySelectorAll('[data-wa]').forEach(function (a) {
-    a.href = a.getAttribute('data-wa-t') === 'fabric'
-      ? waUrl('Здравствуйте! Хочу подобрать ткань для штор.')
+    var t = a.getAttribute('data-wa-t');
+    a.href = t === 'fabric' ? waUrl('Здравствуйте! Хочу подобрать ткань для штор.')
+      : t === 'designer' ? waUrl('Здравствуйте! Хочу заказать выезд дизайнера.')
       : waUrl('Здравствуйте! Хочу узнать цену: ' + a.getAttribute('data-wa') + '.');
   });
 

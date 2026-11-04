@@ -202,6 +202,15 @@ body.menu-open .burger span:last-child { top: 21.5px; transform: rotate(-45deg);
 .rv-a b { font-weight: 500; color: var(--ink); }
 
 /* Как работаем */
+.price-in { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.price-text .trust-facts { margin-top: 18px; }
+.price-text .trust-facts li { font-size: 16.5px; color: var(--ink); }
+.price-text .sub + .trust-facts + .sub { margin-top: 22px; }
+.price-cta { border-radius: var(--r); padding: clamp(28px, 3.4vw, 48px); }
+.price-big { font: 400 clamp(24px, 2.4vw, 32px)/1.25 var(--f-d); letter-spacing: -.01em; color: var(--milk); }
+.price-acts { display: grid; gap: 12px; margin-top: 28px; }
+.price-acts .btn { width: 100%; justify-content: center; }
+@media (max-width: 900px) { .price-in { grid-template-columns: minmax(0, 1fr); } }
 .stl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 36px); counter-reset: s; }
 .stl li { padding-top: 22px; border-top: 1px solid var(--line); min-width: 0; }
 .stl .n { display: block; font: 300 44px/1 var(--f-d); color: transparent; -webkit-text-stroke: 1px var(--gold-d); letter-spacing: -.02em; }
