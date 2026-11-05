@@ -265,7 +265,7 @@ body.menu-open .burger span:last-child { top: 21.5px; transform: rotate(-45deg);
 .ftr-t { font-size: 15px; line-height: 1.6; }
 .ftr-c { display: grid; gap: 10px; justify-items: end; font-size: 15px; }
 .ftr-c a { display: inline-flex; align-items: center; gap: 10px; min-height: 32px; }
-.ftr-c a:first-child { color: var(--gold-hi); font-weight: 500; }
+.ftr-c a[href^="tel:"] { color: var(--gold-hi); font-weight: 500; }
 
 /* Липкая панель на мобильном */
 .mbar { display: none; }
