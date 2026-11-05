@@ -150,6 +150,18 @@
   }, { passive: true });
 
   /* Форма: заявка уходит в WhatsApp */
+  /* Конверсии Google Ads: звонок, WhatsApp, отправка формы. Переход не задерживаем, доставка через beacon */
+  var CONV = { tel: 'AW-18557541724/AAcrCMPYyrIdENy69pBF', wa: 'AW-18557541724/HCWzCNrgyrIdENy69pBF', form: 'AW-18557541724/rECwCMnl0rIdENy69pBF' };
+  var conv = function (k) {
+    if (typeof window.gtag === 'function') window.gtag('event', 'conversion', { send_to: CONV[k], value: 1.0, currency: 'USD', transport_type: 'beacon' });
+  };
+  window.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('tel:') === 0) conv('tel');
+    else if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(h)) conv('wa');
+  }, true);
+
   var form = document.getElementById('leadForm');
   if (form) {
     var err = document.getElementById('formErr');
@@ -165,6 +177,7 @@
       lines.push('Телефон: ' + form.phone.value.trim());
       if (need.length) lines.push('Нужно: ' + need.join(', '));
       if (form.note.value.trim()) lines.push('Комментарий: ' + form.note.value.trim());
+      conv('form');
       window.open(waUrl(lines.join('\n')), '_blank', 'noopener');
       var ok = document.getElementById('formOk'); if (ok) ok.hidden = false;
     });
