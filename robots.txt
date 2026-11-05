@@ -9,4 +9,4 @@ Allow: /
 Disallow: /assets/lang/
 Disallow: /*lang=kk
 
-Sitemap: https://songokura.github.io/granddecor/sitemap.xml
+Sitemap: https://granddecor.kz/sitemap.xml
