@@ -191,11 +191,8 @@ body.menu-open .burger span:last-child { top: 21.5px; transform: rotate(-45deg);
 .trust-n span { font-size: 16px; color: var(--ink-2); }
 .map2gis { margin-top: 20px; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: var(--milk); height: clamp(280px, 30vw, 380px); }
 .trust-text .rate { width: 100%; }
-.map2gis { position: relative; display: block; }
-.map2gis picture { display: block; height: 100%; }
-.map2gis img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.map-btn { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: var(--r); background: var(--graphite); color: var(--milk); font: 500 15px/1.2 var(--f-t); }
-@media (hover: hover) and (pointer: fine) { .map2gis:hover .map-btn { background: var(--gold); color: var(--graphite); } }
+.map2gis iframe { display: block; width: 100%; height: 100%; border: 0; }
+@media (max-width: 760px) { .map2gis { height: 400px; } .map2gis iframe { width: 140%; height: 140%; transform: scale(.7143); transform-origin: 0 0; } }
 .trust-facts { margin-top: 22px; display: grid; gap: 10px; }
 .trust-facts li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
 .trust-facts li::before { content: ""; position: absolute; left: 0; top: .72em; width: 12px; height: 1px; background: var(--gold-d); }
